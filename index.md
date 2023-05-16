@@ -10,4 +10,6 @@ sidebar: false
 
 <img src="{{site.baseurl}}/assets/images/strudel-logo-transp.png" alt="STRUDEL logo" height="100px" width="642px">
 
-# Home page 
+Sorry, this page is under construction!
+
+Come back after June 1, 2023 to see more content.
