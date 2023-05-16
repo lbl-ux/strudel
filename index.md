@@ -8,6 +8,6 @@ subtitle: Scientific sofTware Research for User experience, Design, Engagement, 
 sidebar: false
 ---
 
-<img src="/assets/images/strudel-logo-transp.png" alt="STRUDEL logo" height="100px" width="642px">
+<img src="{{site.baseurl}}/assets/images/strudel-logo-transp.png" alt="STRUDEL logo" height="100px" width="642px">
 
 # Home page 
