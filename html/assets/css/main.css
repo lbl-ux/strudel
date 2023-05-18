@@ -4,13 +4,16 @@ html, body {
     background-color: #fffff8;
     color: #111111;
 }
+h2 {
+    font-size: 38px;
+}
 div#hdr {
     margin-left: 20%;
 }
 div#content {
     margin-left: 20%;
+    margin-right: 20%;
     max-width: 45em;
-
 }
 /* Hanging indent effect for lists of things */
 ul.hanging-indent {
