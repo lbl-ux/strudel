@@ -7,7 +7,9 @@ html, body {
 h2 {
     font-size: 38px;
 }
+/* indent header and content */
 div#hdr {
+    margin-top: 20px;
     margin-left: 10%;
 }
 div#content {
