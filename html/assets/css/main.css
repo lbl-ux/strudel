@@ -1,0 +1,24 @@
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    /* Tufte-style colors */
+    background-color: #fffff8;
+    color: #111111;
+}
+div#hdr {
+    margin-left: 20%;
+}
+div#content {
+    margin-left: 20%;
+    max-width: 45em;
+
+}
+/* Hanging indent effect for lists of things */
+ul.hanging-indent {
+    padding: 0;
+}
+ul.hanging-indent li {
+    list-style-type: none;
+    padding-left: 20px;
+    text-indent: -20px;
+    margin-bottom: 0.5em;
+}
