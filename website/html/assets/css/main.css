@@ -17,6 +17,11 @@ div#content {
     margin-right: 20%;
     max-width: 45em;
 }
+/* General links */
+a {
+    text-decoration: none;
+    weight: 800;
+}
 /* Hanging indent effect for lists of things */
 ul.hanging-indent {
     padding: 0;
@@ -26,4 +31,19 @@ ul.hanging-indent li {
     padding-left: 20px;
     text-indent: -20px;
     margin-bottom: 0.5em;
+}
+/* references */
+.ref  p.ref-line {
+    width: 10em;
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0;
+    border-top: 2px solid lightgrey
+}
+.ref p {
+    font-size: 90%;
+    color: #0d47a1;
+}
+a.ref-link {
+    color: #0d47a1;
+    text-decoration: none;
 }
