@@ -12,3 +12,7 @@ The STRUDEL project is based at Lawrence Berkeley National Laboratory. The team 
 * Dan Gunter
 * Drew Paine
 * Sarah Poon
+
+## For website developers
+
+Please read [website/README.txt](website/README.txt)
