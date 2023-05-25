@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 {{> htmlheader }}
+<style>
+	span .section-title {
+		font-weight: 700;
+	}
+</style>
 <body>
 {{> pageheader }}
 <div id="content">
@@ -9,19 +14,19 @@
     -->
     <h3>Running Optimizations / Simulations / Analyses</h3> 
     <div>
-    	<p>Intent of workflow: Enable users to run calculations/ optimizations/ simulations on a pre-defined/ newly created/ altered model with attributes to observe and compare results to help users make data-driven decisions/ improve performance/ reduce costs/ increase safety/ reduce risk in a variety of fields and applications
+    	<p><span class="section-title">Intent of workflow:</span> Enable users to run calculations/ optimizations/ simulations on a pre-defined/ newly created/ altered model with attributes to observe and compare results to help users make data-driven decisions/ improve performance/ reduce costs/ increase safety/ reduce risk in a variety of fields and applications
     	</p>
 
-		<p>Common UI patterns used: Lists, stepper/progress indicator, forms, data tables, panels
+		<p><span class="section-title">Common UI patterns used:</span> Lists, stepper/progress indicator, forms, data tables, panels
 		Optimizations usually require a stepper also known as progress indicator pattern to guide users through a long multi-step process. Complex optimizations require user input for multiple attributes and involve different types of data organization, such as forms, tables, lists, and panels. These elements can be grouped into user-friendly sections using tabs.
 		</p> 
 
-		<p>Other UI patterns used: Interactive canvas, diagrams, tabs, charts & graphs, search,  etc.
+		<p><span class="section-title">Other UI patterns used:</span> Interactive canvas, diagrams, tabs, charts & graphs, search,  etc.
 		They might have complex inputs which may need  uncommon patterns like canvas interactions for manipulating attributes in diagrams. 
 		Optimization results may have visualizations, such as explorative maps, charts, graphs, and diagrams, to provide better understanding of the data, making it easier for users to identify key insights and draw meaningful conclusions.
 		</p>
 
-		<p>Do’s: 
+		<p><span class="section-title">Do’s: </span>
 			<ul>	
 				<li>Break the workflow into multiple workable steps and use a progress indicator/ stepper to help users see the progress and other steps in process to complete</li>
 				<li>Organizing the information into sections that are easy to digest, this helps improves the readability and searchability</li>
@@ -33,7 +38,7 @@
 			</ul>
 		</p>
 
-		<p>Don’ts:
+		<p><span class="section-title">Don’ts:</span>
 			<ul>
 				<li>Don’t break the workflow into too many small steps making it a long process to complete, it may overwhelm the users</li>
 				<li>Don’t assume users would understand each input field and the values to configure it</li>
