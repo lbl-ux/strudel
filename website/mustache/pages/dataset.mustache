@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+{{> htmlheader }}
+<style>
+	.section-title {
+		font-weight: 700;
+	}
+	.subheading {
+		color: #8C8C8C;
+		font-size: 12px;
+		margin-top: 30px;
+	}
+	.designsystem-heading {
+		margin-top: 0px;
+	}
+	div#content.designsystem {
+		padding-bottom: 60px;
+		max-width: 60em;
+	}
+</style>
+<body>
+{{> pageheader }}
+<div id="content" class="designsystem">
+    <!--
+    Add content here
+    -->
+    <div class="subheading"><span>TASK FLOW</span></div>
+    <h3 class="designsystem-heading">Dataset Repository</h3> 
+    <div>
+    	<h4>Intent of task flow:</h4>
+    	<p>Dataset repository lists multiple(verified?) datasets uploaded by the community and available to the community which can be evaluated, downloaded and used for further science research.
+    	</p>
+    	<h4>Task Flow Example Template</h4>
+		<div>
+			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FUI-Flow-Example-Templates%3Ftype%3Ddesign%26node-id%3D164%253A10015%26t%3Dy87sMiJfTyFpOkqv-1" allowfullscreen></iframe>
+		</div>
+
+
+		<h4>Do’s: </h4>
+		<p>
+			<ul>	
+				<li>Support search and filtering of the data itself, not just dataset metadata</li>
+				<li>Allow for inspection of the data prior to downloading. This can include:
+					<ul style="padding-bottom: 0;">
+						<li style="margin-left:1em">For observational data - showing what types of data was collected, over what period of time, and the observation count</li>
+						<li style="margin-left:1em">Plots to describe characteristics of the data, such as gaps, quality </li>
+					</ul>
+				</li>
+				<li>Expect that there could be quite a lot of filtering options. Vertical sidebar filters can be useful for this, as well as “build your own” filters type patterns. </li>
+				<li>If possible, allow users to filter within a specific dataset, so they don’t have to download an entire dataset that might not be relevant to their work. </li>
+				<li>Data should always include units, so that it can be converted</li>
+
+
+			</ul>
+		</p>
+
+		<h4>Don’ts:</h4>
+		<p>
+			<ul>
+				
+			</ul>
+		</p>
+	</div>
+
+
+{{> pagefooter }}
+</body>
+</html>
