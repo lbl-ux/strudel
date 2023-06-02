@@ -1,8 +1,10 @@
 # Build HTML
+import argparse
 import chevron
 import json
 from pathlib import Path
 import sys
+import time
 
 
 def find_templates(root):
@@ -10,7 +12,7 @@ def find_templates(root):
         yield p
 
 
-def main():
+def run():
     # Check location
     cwd = Path.cwd()
     if cwd.name != "website":
@@ -29,6 +31,15 @@ def main():
         rel_parts = input_path.relative_to(root).parts
         dots = len(rel_parts) - 1
         data["assets"] = f"{'../' * dots}assets"
+        # Set vars for nav
+        if dots == 0:
+            data["at"] = {"home": True}
+        elif dots == 1:
+            # XXX: need to manually add other subdirs
+            data["at"] = {"flows": True}
+        else:
+            data["at"] = {}
+        print(f"Data: {data}")
         # Read template
         with input_path.open("r", encoding="utf-8") as f:
             result = chevron.render(f, data, partials_path=partials_dir)
@@ -44,5 +55,23 @@ def main():
         print(f"{input_path} -> {output_path}")
 
 
+def main(args):
+    if args.loop:
+        print("Press Control-C to stop")
+        try:
+            while 1:
+                time.sleep(3)
+                print("-- run --")
+                run()
+        except KeyboardInterrupt:
+            print("Stopped")
+
+    else:
+        run()
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    p = argparse.ArgumentParser()
+    p.add_argument("--loop", action="store_true")
+    args = p.parse_args()
+    sys.exit(main(args))

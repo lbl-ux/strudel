@@ -1,4 +1,30 @@
 <div id="hdr">
-    <img src="{{ assets }}/images/strudel-logo-transp.png" alt="STRUDEL logo" height="80px"
-         width="514px">
+    <img src="{{ assets }}/images/strudel-logo-transp.png" alt="STRUDEL logo"
+               height="60px">
+</div>
+<div id="hdr-nav">
+    <ul>
+        <li class="{{#at.home}}select{{/at.home}}">
+            <a href="/"><button class="mdl-button mdl-js-button">Home</button></a>
+        </li>
+        <li class="{{#at.flows}}select{{/at.flows}}"><a href="/flows/">
+            <button class="mdl-button mdl-js-button">Flows</button></a>
+            {{#at.flows}}
+                <ul>
+                    <li>
+                        <a href="./dataset.html"><button class="mdl-button mdl-js-button">Dataset</button></a>
+                    </li>
+                    <li>
+                        <a href="./monitor.html"><button class="mdl-button mdl-js-button">Monitoring</button></a>
+                    </li>
+                    <li>
+                        <a href="./optimization.html"><button class="mdl-button mdl-js-button">Optimization</button></a>
+                    </li>
+                </ul>
+            {{/at.flows}}
+            {{^at.flows}}
+                <div>&nbsp;</div>
+            {{/at.flows}}
+        </li>
+    </ul>
 </div>

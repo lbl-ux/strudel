@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="../assets/css/material.min.css" type="text/css">
+    <script src="../assets/js/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
 </head>
 <style>
@@ -24,10 +26,30 @@
 </style>
 <body>
 <div id="hdr">
-    <img src="../assets/images/strudel-logo-transp.png" alt="STRUDEL logo" height="80px"
-         width="514px">
+    <img src="../assets/images/strudel-logo-transp.png" alt="STRUDEL logo"
+               height="60px">
 </div>
-<div id="content" class="designsystem">
+<div id="hdr-nav">
+    <ul>
+        <li class="">
+            <a href="/"><button class="mdl-button mdl-js-button">Home</button></a>
+        </li>
+        <li class="select"><a href="/flows/">
+            <button class="mdl-button mdl-js-button">Flows</button></a>
+                <ul>
+                    <li>
+                        <a href="./dataset.html"><button class="mdl-button mdl-js-button">Dataset</button></a>
+                    </li>
+                    <li>
+                        <a href="./monitor.html"><button class="mdl-button mdl-js-button">Monitoring</button></a>
+                    </li>
+                    <li>
+                        <a href="./optimization.html"><button class="mdl-button mdl-js-button">Optimization</button></a>
+                    </li>
+                </ul>
+        </li>
+    </ul>
+</div><div id="content" class="designsystem">
     <!--
     Add content here
     -->
@@ -55,7 +77,7 @@
 		Optimization results may have visualizations, such as explorative maps, charts, graphs, and diagrams, to provide better understanding of the data, making it easier for users to identify key insights and draw meaningful conclusions.
 		</p>
 
-		<h4>Do’s: </h4>
+		<h4>Do's: </h4>
 		<p>
 			<ul>	
 				<li>Break the task flow into multiple workable steps and use a progress indicator/ stepper to help users see the progress and other steps in process to complete</li>
@@ -68,7 +90,7 @@
 			</ul>
 		</p>
 
-		<h4>Don’ts:</h4>
+		<h4>Dont's:</h4>
 		<p>
 			<ul>
 				<li>Don’t break the workflow into too many small steps making it a long process to complete, it may overwhelm the users</li>
