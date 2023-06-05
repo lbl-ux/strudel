@@ -5,9 +5,9 @@
 <div id="hdr-nav">
     <ul>
         <li class="{{#at.home}}select{{/at.home}}">
-            <a href="/"><button class="mdl-button mdl-js-button">Home</button></a>
+            <a href="{{ root }}"><button class="mdl-button mdl-js-button">Home</button></a>
         </li>
-        <li class="{{#at.flows}}select{{/at.flows}}"><a href="/flows/">
+        <li class="{{#at.flows}}select{{/at.flows}}"><a href="{{ root }}flows/">
             <button class="mdl-button mdl-js-button">Flows</button></a>
             {{#at.flows}}
                 <ul>
