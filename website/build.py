@@ -12,7 +12,7 @@ def find_templates(root):
         yield p
 
 
-def run():
+def run(options=None):
     # Check location
     cwd = Path.cwd()
     if cwd.name != "website":
@@ -24,6 +24,7 @@ def run():
     # Load data
     with data_file.open("r", encoding="utf-8") as f:
         data = json.load(f)
+    data.update(options)  # override with cmdline options
     # Loop over templates
     root = Path("mustache/pages")
     for input_path in find_templates(root):
@@ -35,11 +36,11 @@ def run():
         if dots == 0:
             data["at"] = {"home": True}
         elif dots == 1:
-            # XXX: need to manually add other subdirs
-            data["at"] = {"flows": True}
+            subdir = rel_parts[0]
+            data["at"] = {subdir: True}
         else:
             data["at"] = {}
-        print(f"Data: {data}")
+       #print(f"Data: {data}")
         # Read template
         with input_path.open("r", encoding="utf-8") as f:
             result = chevron.render(f, data, partials_path=partials_dir)
@@ -56,22 +57,26 @@ def run():
 
 
 def main(args):
+    options = {}
+    if args.root is not None:
+        options["root"] = args.root
     if args.loop:
         print("Press Control-C to stop")
         try:
             while 1:
                 time.sleep(3)
                 print("-- run --")
-                run()
+                run(options=options)
         except KeyboardInterrupt:
             print("Stopped")
 
     else:
-        run()
+        run(options=options)
 
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--loop", action="store_true")
+    p.add_argument("--root", help="Override data.json 'root'")
+    p.add_argument("--loop", action="store_true", default=None)
     args = p.parse_args()
     sys.exit(main(args))
