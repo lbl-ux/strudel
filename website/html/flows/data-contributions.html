@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
 </head>
+<style>
+	.section-title {
+		font-weight: 700;
+	}
+	.subheading {
+		color: #8C8C8C;
+		font-size: 12px;
+		margin-top: 30px;
+	}
+	.designsystem-heading {
+		margin-top: 0px;
+	}
+	div#content.designsystem {
+		padding-bottom: 60px;
+		max-width: 60em;
+	}
+</style>
 <body>
 <div id="hdr">
     <img src="../assets/images/strudel-logo-transp.png" alt="STRUDEL logo"
@@ -46,36 +63,44 @@
         </li>
     </ul>
 </div>
-<div id="content">
- <h2>Flows</h2>
-    <p>We are exploring a general way of documenting different kinds of task flows.</p>
-    <ul class="mdl-list">
-        <li class="mdl-list__item">
-        <a href="./dataset.html">Dataset</a>.
-            Finding, Exploring, and Downloading Datasets
-        </li>
-        <li class="mdl-list__item">
-        <a href="./monitor.html">Monitoring</a>.
-            Monitoring Tasks / Experimental Events / Data
-        </li>
-        <li class="mdl-list__item">
-        <a href="./optimization.html">Optimization</a>.
-            Running Optimizations / Simulations / Analyses
-        </li>
-        <li class="mdl-list__item">
-        <a href="./comparison.html">Comparison</a>.
-            Comparing Scenarios/ Analyses / Simulations
-        </li>
-        <li class="mdl-list__item">
-        <a href="././data-contributions.html">Contributing Data</a>.
-            Contributing data/ dataset / collections
-        </li>
-        <li class="mdl-list__item">
-        <a href="./explore-entities.html">Exploring entities</a>.
-            Exploring entities/ data list / collections
-        </li>
-    </ul>
-</div>
+<div id="content" class="designsystem">
+    <!--
+    Add content here
+    -->
+   <div class="subheading"><span>TASK FLOW</span></div>
+    <h3 class="designsystem-heading">Contributing Data</h3> 
+    <div>
+    	<h4>Intent of task flow:</h4>
+    	<p>Community sharing of data/ knowledge is essential for growth & promotion of science, data contribution workflow are essential for enabling science users to upload their work to a community approved repository.
+    	</p>
+    	<h4>Task flow example template</h4>
+		<div>
+			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FTask-Flow-Example-Templates%3Ftype%3Ddesign%26node-id%3D564%253A14990%26t%3DpOIfFdqWx8OPGAaM-1" allowfullscreen></iframe>
+		</div>
+
+		<h4>Common UI patterns used:</h4>
+    	<p>Long forms, progress steppers, badges to indicate state
+    	</p>
+    	<h4>Other UI patterns used:</h4>
+    	<p>
+    	</p>
+		<h4>Do’s: </h4>
+		<p>
+			<ul>	
+				<li>If the contribution requires a lot of metadata, anticipate that users may need to work on the contribution over several sessions.  </li>
+				<li>Enable creating drafts, saving state, before final submission</li>
+			</ul>
+		</p>
+
+		<h4>Don’ts:</h4>
+		<p>
+			<ul>
+				
+			</ul>
+		</p>
+	</div>
+
+
 <div id="footer">
 </div>
 </body>

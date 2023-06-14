@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+{{> htmlheader }}
+<style>
+	.section-title {
+		font-weight: 700;
+	}
+	.subheading {
+		color: #8C8C8C;
+		font-size: 12px;
+		margin-top: 30px;
+	}
+	.designsystem-heading {
+		margin-top: 0px;
+	}
+	div#content.designsystem {
+		padding-bottom: 60px;
+		max-width: 60em;
+	}
+</style>
+<body>
+{{> pageheader }}
+<div id="content" class="designsystem">
+    <!--
+    Add content here
+    -->
+   <div class="subheading"><span>TASK FLOW</span></div>
+    <h3 class="designsystem-heading">Exploring Entities</h3> 
+    <div>
+    	<h4>Intent of task flow:</h4>
+    	<p>Many scientific softwares exist to make domain specific data available and accessible to the community for enabling more research in that domain
+    	</p>
+    	<h4>Task flow example template</h4>
+		<div>
+			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FTask-Flow-Example-Templates%3Ftype%3Ddesign%26node-id%3D580%253A14359%26t%3DpOIfFdqWx8OPGAaM-1" allowfullscreen></iframe>
+		</div>
+
+		<h4>Common UI patterns used:</h4>
+    	<p>Data tables,summary view, details view, search, filters <br/>
+The most common way to display an organized entity repository is via data tables. By incorporating search, sort, and filter functions, data tables enhance data accessibility and facilitate efficient data analysis
+
+    	</p>
+    	<h4>Other UI patterns used:</h4>
+    	<p>Interactive Maps, charts/ graphs, diagrams, etc. <br/>
+Visualizations, such as explorative maps, charts, graphs, and diagrams, are effective tools that can be used in conjunction with data tables to provide users with a more comprehensive understanding of the data in their respective contexts. These visualizations can help to highlight relevant patterns and narrow down the scope of the data, making it easier for users to identify key insights and draw meaningful conclusion
+
+    	</p>
+		<h4>Do’s: </h4>
+		<p>
+			<ul>	
+				<li>Search and filter capabilities is really important to give a good exploration experience</li>
+				<li>Data table: Give pagination and customisable number of rows to view in one page</li>
+				<li>Link the entity name/ identifier to entity summary/ detail view</li>
+				<li>Entity detail view: Give proper title and breadcrumb navigation to go back to main data table</li>
+				<li>Entity detail view: Consider giving page navigation if too many sections</li>
+			</ul>
+		</p>
+
+		<h4>Don’ts:</h4>
+		<p>
+			<ul>
+				
+			</ul>
+		</p>
+	</div>
+
+
+{{> pagefooter }}
+</body>
+</html>

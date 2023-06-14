@@ -67,33 +67,32 @@
     <!--
     Add content here
     -->
-    <div class="subheading"><span>TASK FLOW</span></div>
-    <h3 class="designsystem-heading">Finding, Exploring, and Downloading Datasets</h3> 
+   <div class="subheading"><span>TASK FLOW</span></div>
+    <h3 class="designsystem-heading">Comparing Scenarios</h3> 
     <div>
     	<h4>Intent of task flow:</h4>
-    	<p>Dataset repository lists multiple(verified?) datasets uploaded by the community and available to the community which can be evaluated, downloaded and used for further science research.
+    	<p>To help decision making through comparison of complex entities with multiple attributes, the comparison workflows lay out the information in a clear and concise manner which can save users time and effort in researching and analyzing different options. 
     	</p>
     	<h4>Task flow example template</h4>
 		<div>
-			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FUI-Flow-Example-Templates%3Ftype%3Ddesign%26node-id%3D164%253A10015%26t%3Dy87sMiJfTyFpOkqv-1" allowfullscreen></iframe>
+			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FTask-Flow-Example-Templates%3Ftype%3Ddesign%26node-id%3D485%253A13777%26t%3DpOIfFdqWx8OPGAaM-1" allowfullscreen></iframe>
 		</div>
 
-
+		<h4>Common UI patterns used:</h4>
+    	<p>Lists, data tables, search, filter<br/>The most common way to show comparison between different options with multiple attributes is through a data table, with the rows  and columns as attributes and options.
+    	</p>
+    	<h4>Other UI patterns used:</h4>
+    	<p>Visualizations, charts & graphs, diagrams etc.<br/>In addition to the tabular format, visual comparisons through charts/ graphs and dimensions for main attributes help to highlight the key differences which makes it faster and easier
+    	</p>
 		<h4>Do’s: </h4>
 		<p>
 			<ul>	
-				<li>Support search and filtering of the data itself, not just dataset metadata</li>
-				<li>Allow for inspection of the data prior to downloading. This can include:
-					<ul style="padding-bottom: 0;">
-						<li style="margin-left:1em">For observational data - showing what types of data was collected, over what period of time, and the observation count</li>
-						<li style="margin-left:1em">Plots to describe characteristics of the data, such as gaps, quality </li>
-					</ul>
-				</li>
-				<li>Expect that there could be quite a lot of filtering options. Vertical sidebar filters can be useful for this, as well as “build your own” filters type patterns. </li>
-				<li>If possible, allow users to filter within a specific dataset, so they don’t have to download an entire dataset that might not be relevant to their work. </li>
-				<li>Data should always include units, so that it can be converted</li>
-
-
+				<li>Understand how complex/ easy the scenario manipulation for comparison is. Based on that - the comparison process can involve a step for selecting attributes creating new scenarios to compare; or can mean selecting previously created scenarios to be compared against each other</li>
+				<li>Prioritize the attributes of scenarios which are critical for comparison instead of exposing all of the attributes at the same level.</li>
+				<li>If there are too many attributes for comparison, give a way for users to search & select the attributes from the full list which they want to compare at priority. This makes it easy for them to focus on their interests instead of getting overwhelmed and scan the large comparison matrix</li>
+				<li>Consider what way of showing diagrams/maps for scenario comparison would be effective - side by side, one at a time, sliders, overlay etc.</li>
+				<li>Using data visualizations with comparison metrics will help to highlight the differences and similarities of scenarios</li>
+				<li>Give a way to save/ export comparison results for user’s future reference</li>
 			</ul>
 		</p>
 

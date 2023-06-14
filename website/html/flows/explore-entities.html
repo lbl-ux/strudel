@@ -67,33 +67,35 @@
     <!--
     Add content here
     -->
-    <div class="subheading"><span>TASK FLOW</span></div>
-    <h3 class="designsystem-heading">Finding, Exploring, and Downloading Datasets</h3> 
+   <div class="subheading"><span>TASK FLOW</span></div>
+    <h3 class="designsystem-heading">Exploring Entities</h3> 
     <div>
     	<h4>Intent of task flow:</h4>
-    	<p>Dataset repository lists multiple(verified?) datasets uploaded by the community and available to the community which can be evaluated, downloaded and used for further science research.
+    	<p>Many scientific softwares exist to make domain specific data available and accessible to the community for enabling more research in that domain
     	</p>
     	<h4>Task flow example template</h4>
 		<div>
-			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FUI-Flow-Example-Templates%3Ftype%3Ddesign%26node-id%3D164%253A10015%26t%3Dy87sMiJfTyFpOkqv-1" allowfullscreen></iframe>
+			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FTask-Flow-Example-Templates%3Ftype%3Ddesign%26node-id%3D580%253A14359%26t%3DpOIfFdqWx8OPGAaM-1" allowfullscreen></iframe>
 		</div>
 
+		<h4>Common UI patterns used:</h4>
+    	<p>Data tables,summary view, details view, search, filters <br/>
+The most common way to display an organized entity repository is via data tables. By incorporating search, sort, and filter functions, data tables enhance data accessibility and facilitate efficient data analysis
 
+    	</p>
+    	<h4>Other UI patterns used:</h4>
+    	<p>Interactive Maps, charts/ graphs, diagrams, etc. <br/>
+Visualizations, such as explorative maps, charts, graphs, and diagrams, are effective tools that can be used in conjunction with data tables to provide users with a more comprehensive understanding of the data in their respective contexts. These visualizations can help to highlight relevant patterns and narrow down the scope of the data, making it easier for users to identify key insights and draw meaningful conclusion
+
+    	</p>
 		<h4>Do’s: </h4>
 		<p>
 			<ul>	
-				<li>Support search and filtering of the data itself, not just dataset metadata</li>
-				<li>Allow for inspection of the data prior to downloading. This can include:
-					<ul style="padding-bottom: 0;">
-						<li style="margin-left:1em">For observational data - showing what types of data was collected, over what period of time, and the observation count</li>
-						<li style="margin-left:1em">Plots to describe characteristics of the data, such as gaps, quality </li>
-					</ul>
-				</li>
-				<li>Expect that there could be quite a lot of filtering options. Vertical sidebar filters can be useful for this, as well as “build your own” filters type patterns. </li>
-				<li>If possible, allow users to filter within a specific dataset, so they don’t have to download an entire dataset that might not be relevant to their work. </li>
-				<li>Data should always include units, so that it can be converted</li>
-
-
+				<li>Search and filter capabilities is really important to give a good exploration experience</li>
+				<li>Data table: Give pagination and customisable number of rows to view in one page</li>
+				<li>Link the entity name/ identifier to entity summary/ detail view</li>
+				<li>Entity detail view: Give proper title and breadcrumb navigation to go back to main data table</li>
+				<li>Entity detail view: Consider giving page navigation if too many sections</li>
 			</ul>
 		</p>
 
