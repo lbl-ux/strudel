@@ -52,6 +52,15 @@ a.ref-link {
     color: #0d47a1;
     text-decoration: none;
 }
+/* alerts */
+.alert-info {
+    width: 100%;
+    max-width: 800px; 
+    background-color: #E8F5FC;
+    padding: 16px;
+    border-radius: 2px;
+    color: #284E69;
+}
 /* Navigation */
 div#hdr-nav {
  margin-left: 2em;
