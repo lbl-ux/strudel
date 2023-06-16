@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-{{> htmlheader }}
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="../assets/css/material.min.css" type="text/css">
+    <script src="../assets/js/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</head>
 <style>
 	.section-title {
 		font-weight: 700;
@@ -19,7 +25,44 @@
 	}
 </style>
 <body>
-{{> pageheader }}
+<div id="hdr">
+    <img src="../assets/images/strudel-logo-transp.png" alt="STRUDEL logo"
+               height="60px">
+</div>
+<div id="hdr-nav">
+    <ul>
+        <li class="">
+            <a href="/strudel/"><button class="mdl-button mdl-js-button">Home</button></a>
+        </li>
+        <!-- <li class=""><a href="/strudel/design_system/">
+            <button class="mdl-button mdl-js-button">Design System</button></a>
+        </li> -->
+
+        <li class="select"><a href="/strudel/flows/">
+            <button class="mdl-button mdl-js-button">Flows</button></a>
+                <ul>
+                    <li>
+                        <a href="./dataset.html"><button class="mdl-button mdl-js-button">Dataset</button></a>
+                    </li>
+                    <li>
+                        <a href="./monitor.html"><button class="mdl-button mdl-js-button">Monitoring</button></a>
+                    </li>
+                    <li>
+                        <a href="./optimization.html"><button class="mdl-button mdl-js-button">Optimization</button></a>
+                    </li>
+                    <li>
+                        <a href="./comparison.html"><button class="mdl-button mdl-js-button">Comparison</button></a>
+                    </li>
+                    <li>
+                        <a href="./data-contributions.html"><button class="mdl-button mdl-js-button">Contribution</button></a>
+                    </li>
+                    <li>
+                        <a href="./explore-entities.html"><button class="mdl-button mdl-js-button">Entities</button></a>
+                    </li>
+                </ul>
+        </li>
+    </ul>
+</div>
 <div id="content" class="designsystem">
     <!--
     Add content here
@@ -64,6 +107,7 @@
 	</div>
 
 
-{{> pagefooter }}
+<div id="footer">
+</div>
 </body>
 </html>
