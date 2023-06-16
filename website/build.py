@@ -33,14 +33,22 @@ def run(options=None):
         dots = len(rel_parts) - 1
         data["assets"] = f"{'../' * dots}assets"
         # Set vars for nav
+        # clear all
+        dme = [k for k in data if k.startswith("at")]
+        for k in dme:
+            del data[k]
         if dots == 0:
-            data["at"] = {"home": True}
-        elif dots == 1:
-            subdir = rel_parts[0]
-            data["at"] = {subdir: True}
+            data["at1"] = {"home": True}
+        elif dots > 0:
+            for i in range(dots):
+                subdir = rel_parts[i]
+                data[f"at{i+1}"] = {subdir: True}
+            leaf = input_path.stem
+            if leaf != "index":
+                data[f"at{dots + 1}"] = {leaf: True}
         else:
-            data["at"] = {}
-       #print(f"Data: {data}")
+            pass
+        #print(f"Parts: {rel_parts}\nData: {data}")
         # Read template
         with input_path.open("r", encoding="utf-8") as f:
             result = chevron.render(f, data, partials_path=partials_dir)

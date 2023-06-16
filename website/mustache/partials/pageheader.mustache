@@ -1,43 +1,86 @@
 <div id="hdr">
     <img src="{{ assets }}/images/strudel-logo-transp.png" alt="STRUDEL logo"
-               height="60px">
+         height="60px">
 </div>
 <div id="hdr-nav">
     <ul>
-        <li class="{{#at.home}}select{{/at.home}}">
-            <a href="{{ root }}"><button class="mdl-button mdl-js-button">Home</button></a>
+        <li>
+            <a href="{{ root }}">
+                <button class="mdl-button mdl-js-button {{#at1.home}}select{{/at1.home}}">
+                    Home
+                </button>
+            </a>
         </li>
-        <!-- <li class="{{#at.design_system}}select{{/at.design_system}}"><a href="{{ root }}design_system/">
-            <button class="mdl-button mdl-js-button">Design System</button></a>
-        </li> -->
-
-        <li class="{{#at.flows}}select{{/at.flows}}"><a href="{{ root }}flows/">
-            <button class="mdl-button mdl-js-button">Flows</button></a>
-            {{#at.flows}}
+        <li><a
+                href="{{ root }}design_system/">
+            <button class="mdl-button mdl-js-button {{#at1.design_system}}select{{/at1.design_system}}">
+                Design System
+            </button>
+        </a>
+            {{#at1.design_system}}
+                {{^at2.flows}}
                 <ul>
-                    <li>
-                        <a href="./dataset.html"><button class="mdl-button mdl-js-button">Dataset</button></a>
-                    </li>
-                    <li>
-                        <a href="./monitor.html"><button class="mdl-button mdl-js-button">Monitoring</button></a>
-                    </li>
-                    <li>
-                        <a href="./optimization.html"><button class="mdl-button mdl-js-button">Optimization</button></a>
-                    </li>
-                    <li>
-                        <a href="./comparison.html"><button class="mdl-button mdl-js-button">Comparison</button></a>
-                    </li>
-                    <li>
-                        <a href="./data-contributions.html"><button class="mdl-button mdl-js-button">Contribution</button></a>
-                    </li>
-                    <li>
-                        <a href="./explore-entities.html"><button class="mdl-button mdl-js-button">Entities</button></a>
-                    </li>
-                </ul>
-            {{/at.flows}}
-            {{^at.flows}}
+                <li><a href="{{root}}design_system/flows/">
+                    <button class="mdl-button mdl-js-button">
+                        Flows
+                    </button></a>
+                {{/at2.flows}}
+                {{#at2.flows}}
+                    &rarr;<a href="{{root}}design_system/flows/">
+                    <button class="mdl-button mdl-js-button select">
+                        Flows
+                    </button></a>
+                    <ul>
+                        <li>
+                            <a href="dataset.html">
+                                <button class="mdl-button mdl-js-button{{#at3.dataset}} select{{/at3.dataset}}">
+                                    Dataset
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="monitor.html">
+                                <button class="mdl-button mdl-js-button{{#at3.monitor}} select{{/at3.monitor}}">
+                                    Monitoring
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./optimization.html">
+                                <button class="mdl-button mdl-js-button{{#at3.optimization}} select{{/at3.optimization}}">
+                                    Optimization
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./comparison.html">
+                                <button class="mdl-button mdl-js-button{{#at3.comparison}} select{{/at3.comparison}}">
+                                    Comparison
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./data-contributions.html">
+                                <button class="mdl-button mdl-js-button{{#at3.data-contributions}} select{{/at3.data-contributions}}">
+                                    Contribution
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./explore-entities.html">
+                                <button class="mdl-button mdl-js-button{{#at3.explore-entities}} select{{/at3.explore-entities}}">
+                                    Entities
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                {{/at2.flows}}
+            </li>
+            </ul>
+            {{/at1.design_system}}
+            {{^at1.design_system}}
                 <div>&nbsp;</div>
-            {{/at.flows}}
+            {{/at1.design_system}}
         </li>
     </ul>
 </div>
