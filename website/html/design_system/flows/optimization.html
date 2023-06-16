@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/material.min.css" type="text/css">
+    <script src="../../assets/js/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../../assets/css/main.css" type="text/css">
+</head>
+<style>
+	.section-title {
+		font-weight: 700;
+	}
+	.subheading {
+		color: #8C8C8C;
+		font-size: 12px;
+		margin-top: 30px;
+	}
+	.designsystem-heading {
+		margin-top: 0px;
+	}
+	div#content.designsystem {
+		padding-bottom: 60px;
+		max-width: 60em;
+	}
+</style>
+<body>
+<div id="hdr">
+    <img src="../../assets/images/strudel-logo-transp.png" alt="STRUDEL logo"
+         height="60px">
+</div>
+<div id="hdr-nav">
+    <ul>
+        <li>
+            <a href="/strudel/">
+                <button class="mdl-button mdl-js-button ">
+                    Home
+                </button>
+            </a>
+        </li>
+        <li><a
+                href="/strudel/design_system/">
+            <button class="mdl-button mdl-js-button select">
+                Design System
+            </button>
+        </a>
+                    &rarr;<a href="/strudel/design_system/flows/">
+                    <button class="mdl-button mdl-js-button select">
+                        Flows
+                    </button></a>
+                    <ul>
+                        <li>
+                            <a href="dataset.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Dataset
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="monitor.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Monitoring
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./optimization.html">
+                                <button class="mdl-button mdl-js-button select">
+                                    Optimization
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./comparison.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Comparison
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./data-contributions.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Contribution
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./explore-entities.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Entities
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+            </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id="content" class="designsystem">
+    <!--
+    Add content here
+    -->
+    <div class="subheading"><span>TASK FLOW</span></div>
+    <h3 class="designsystem-heading">Running Optimizations / Simulations / Analyses</h3> 
+    <div>
+    	<h4>Intent of task flow:</h4>
+    	<p>Enable users to run calculations/ optimizations/ simulations on a pre-defined/ newly created/ altered model with attributes to observe and compare results to help users make data-driven decisions/ improve performance/ reduce costs/ increase safety/ reduce risk in a variety of fields and applications
+    	</p>
+    	<h4>Task flow example template</h4>
+		<div>
+			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FOptimization-Template%3Ftype%3Ddesign%26node-id%3D0%253A1%26t%3DrGKOb9Fsj5qh4FWT-1" allowfullscreen></iframe>
+		</div>
+
+		<h4>Common UI patterns used:</h4> 
+		<p>Lists, stepper/progress indicator, forms, data tables, panels</p>
+		<p>
+		Optimizations usually require a stepper also known as progress indicator pattern to guide users through a long multi-step process. Complex optimizations require user input for multiple attributes and involve different types of data organization, such as forms, tables, lists, and panels. These elements can be grouped into user-friendly sections using tabs.
+		</p> 
+
+		<h4>Other UI patterns used:</h4> 
+		<p>Interactive canvas, diagrams, tabs, charts & graphs, search,  etc.</p>
+		<p>
+		They might have complex inputs which may need  uncommon patterns like canvas interactions for manipulating attributes in diagrams. 
+		Optimization results may have visualizations, such as explorative maps, charts, graphs, and diagrams, to provide better understanding of the data, making it easier for users to identify key insights and draw meaningful conclusions.
+		</p>
+
+		<h4>Do's: </h4>
+		<p>
+			<ul>	
+				<li>Break the task flow into multiple workable steps and use a progress indicator/ stepper to help users see the progress and other steps in process to complete</li>
+				<li>Organizing the information into sections that are easy to digest, this helps improves the readability and searchability</li>
+				<li>Offer guidance, tips and links to detailed documentation for complex inputs & interactions which may not be intuitive to many users</li>
+				<li>If it involves long forms for input - pre-fill the forms with default values wherever possible</li>
+				<li>Make attributes searchable and filterable to make users easy to get to attributes of their interests</li>
+				<li>Give real time error warnings for mis-configurations - especially for long complex forms.</li>
+				<li>Users should be able to recover from failed simulations, by letting them go back and change configurations</li>
+			</ul>
+		</p>
+
+		<h4>Dont's:</h4>
+		<p>
+			<ul>
+				<li>Don’t break the workflow into too many small steps making it a long process to complete, it may overwhelm the users</li>
+				<li>Don’t assume users would understand each input field and the values to configure it</li>
+			</ul>
+		</p>
+	</div>
+
+
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/material.min.css" type="text/css">
+    <script src="../../assets/js/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../../assets/css/main.css" type="text/css">
+</head>
+<style>
+	.section-title {
+		font-weight: 700;
+	}
+	.subheading {
+		color: #8C8C8C;
+		font-size: 12px;
+		margin-top: 30px;
+	}
+	.designsystem-heading {
+		margin-top: 0px;
+	}
+	div#content.designsystem {
+		padding-bottom: 60px;
+		max-width: 60em;
+	}
+</style>
+<body>
+<div id="hdr">
+    <img src="../../assets/images/strudel-logo-transp.png" alt="STRUDEL logo"
+         height="60px">
+</div>
+<div id="hdr-nav">
+    <ul>
+        <li>
+            <a href="/strudel/">
+                <button class="mdl-button mdl-js-button ">
+                    Home
+                </button>
+            </a>
+        </li>
+        <li><a
+                href="/strudel/design_system/">
+            <button class="mdl-button mdl-js-button select">
+                Design System
+            </button>
+        </a>
+                    &rarr;<a href="/strudel/design_system/flows/">
+                    <button class="mdl-button mdl-js-button select">
+                        Flows
+                    </button></a>
+                    <ul>
+                        <li>
+                            <a href="dataset.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Dataset
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="monitor.html">
+                                <button class="mdl-button mdl-js-button select">
+                                    Monitoring
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./optimization.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Optimization
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./comparison.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Comparison
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./data-contributions.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Contribution
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./explore-entities.html">
+                                <button class="mdl-button mdl-js-button">
+                                    Entities
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+            </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id="content" class="designsystem">
+    <!--
+    Add content here
+    -->
+    <div class="subheading"><span>TASK FLOW</span></div>
+    <h3 class="designsystem-heading">Monitoring Tasks / Experimental Events / Data</h3> 
+    <div>
+    	<h4>Intent of task flow:</h4>
+    	<p>Task monitors help users track tasks and make decisions based on the status of those tasks. This pattern can be used while running an experiment, in which case, one such decision could be to stop the experiment entirely (in case there are problems with the instrument). In instances where the data monitor is used asynchronously, it can be used to determine if the task should be run again, in cases of failures. 
+		</p>
+		<p>It is different from other monitoring systems in that it is meant to track ongoing tasks, not the status of a system (which is usually represented by a data dashboard). </p>
+
+    	</p>
+    	<h4>Task flow example template</h4>
+		<div>
+			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F37Uf0ZDHQxwlCJGGi9l6an%2FUI-Flow-Example-Templates%3Ftype%3Ddesign%26node-id%3D208%253A12703%26t%3Dy87sMiJfTyFpOkqv-1" allowfullscreen></iframe>
+		</div>
+
+
+		<h4>Do's: </h4>
+		<p>
+			<ul>	
+				<li>Real-time experiments 
+					<ul style="padding-bottom: 0;">
+						<li style="margin-left:1em">The display should refresh to show new data as the data becomes available</li>
+						<li style="margin-left:1em">If data or events need to be reviewed, highlight the new data/events to draw attention to the ones needing review.</li>
+						<li style="margin-left:1em">Enable an easy way for users to add notes alongside monitored events</li>
+						<li style="margin-left:1em">If the monitor is to be used alongside other software, consider a smaller aspect ratio app (similar to a chat program) for monitoring events, using the desktop ratio version for more detailed work.</li>
+					</ul>
+				</li>
+				<li>Asynchronous monitors</li>
+					<ul style="padding-bottom: 0;">
+						<li style="margin-left:1em">Usage of states can be useful to help determine next steps. For example, in a job monitor, some indication if the job failed is helpful to determine if the job should be rerun. In cases of experimental observations, the state can determine if more observations are needed. </li>
+						<li style="margin-left:1em">Post task monitors should at the first step be a simple list but can allow access to much more data dense views than in real-time monitors, since time is not as constrained. Rich data access can help users determine next steps. </li>
+					</ul>
+				</li>
+			</ul>
+		</p>
+
+		<h4>Dont's:</h4>
+		<p>
+			<ul>
+				<li>Real-time experiments 
+					<ul style="padding-bottom: 0;">
+						<li style="margin-left:1em">Don’t overload the UI with too much information. Only display enough detail needed to determine whether the experiment is going well or not. Plots and other quick analysis methods can be useful for these determinations</li>
+					</ul>
+				</li>
+
+			</ul>
+		</p>
+	</div>
+
+
+<div id="footer">
+</div>
+</body>
+</html>
