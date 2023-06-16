@@ -59,14 +59,17 @@ div#hdr-nav {
 #hdr-nav > ul {
     padding-left: 10px;
 }
-#hdr-nav ul li {
+#hdr-nav ul > li {
     display: inline;
+}
+#hdr-nav ul > li > ul >  li {
+    display: inline-block;
 }
 #hdr-nav a {
     text-decoration: none;
     color: #000000;
 }
-#hdr-nav li.select {
+#hdr-nav button.select {
     padding-bottom: 5px;
     border-bottom: 3px solid rgb(233, 30, 99);
 }
