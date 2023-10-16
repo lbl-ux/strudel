@@ -11,6 +11,7 @@
                 </button>
             </a>
         </li>
+
         <li>
             <a href="{{ root }}typology/">
                 <button class="mdl-button mdl-js-button {{#at1.typology}}select{{/at1.typology}}">
@@ -18,28 +19,50 @@
                 </button>
             </a>
         </li>
-        <li><a
-                href="{{ root }}design_system/">
-            <button class="mdl-button mdl-js-button {{#at1.design_system}}select{{/at1.design_system}}">
-                Design System
-            </button>
-        </a>
+
+        <li>
+            <a href="{{ root }}design_system/">
+                <button class="mdl-button mdl-js-button {{#at1.design_system}}select{{/at1.design_system}}">
+                    Design System
+                </button>
+            </a>
             {{#at1.design_system}}
                 {{^at2.flows}}
-                <ul>
-                <li><a href="{{root}}design_system/flows/">
-                    <button class="mdl-button mdl-js-button">
-                        Task Flows
-                    </button></a>
+                    <li>
+                        <a href="{{ root }}contact/">
+                            <button class="mdl-button mdl-js-button {{#at1.contact}}select{{/at1.contact}}">
+                                Contact
+                            </button>
+                        </a>
+                    </li>
+                    <ul>
+                        <li>
+                            <a href="{{root}}design_system/flows/">
+                                <button class="mdl-button mdl-js-button">
+                                    Task Flows
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
                 {{/at2.flows}}
                 {{#at2.flows}}
-                    &rarr;<a href="{{root}}design_system/flows/">
-                    <button class="mdl-button mdl-js-button select">
-                        Task Flows
-                    </button></a>
+                    <li>
+                            &rarr;
+                            <a href="{{root}}design_system/flows/">
+                                <button class="mdl-button mdl-js-button select">
+                                    Task Flows
+                                </button>
+                            </a>
+                    </li>
+                    <li>
+                        <a href="{{ root }}contact/">
+                            <button class="mdl-button mdl-js-button {{#at1.contact}}select{{/at1.contact}}">
+                                Contact
+                            </button>
+                        </a>
+                    </li>
+
                     <ul>
-                        
-                        
                         <li>
                             <a href="./optimization.html">
                                 <button class="mdl-button mdl-js-button{{#at3.optimization}} select{{/at3.optimization}}">
@@ -47,14 +70,14 @@
                                 </button>
                             </a>
                         </li>
-                         <li>
+                        <li>
                             <a href="./comparison.html">
                                 <button class="mdl-button mdl-js-button{{#at3.comparison}} select{{/at3.comparison}}">
                                     Comparison
                                 </button>
                             </a>
                         </li>
-                         <li>
+                        <li>
                             <a href="./explore-entities.html">
                                 <button class="mdl-button mdl-js-button{{#at3.explore-entities}} select{{/at3.explore-entities}}">
                                     Entities
@@ -67,8 +90,7 @@
                                     Dataset
                                 </button>
                             </a>
-                        </li>
-                       
+                        </li>                           
                         <li>
                             <a href="./data-contributions.html">
                                 <button class="mdl-button mdl-js-button{{#at3.data-contributions}} select{{/at3.data-contributions}}">
@@ -83,15 +105,24 @@
                                 </button>
                             </a>
                         </li>
-                       
                     </ul>
+                        
+                    
                 {{/at2.flows}}
-            </li>
-            </ul>
-            {{/at1.design_system}}
-            {{^at1.design_system}}
-                <div>&nbsp;</div>
+                
             {{/at1.design_system}}
         </li>
+        {{^at1.design_system}}
+            <li>
+                <a href="{{ root }}contact/">
+                    <button class="mdl-button mdl-js-button {{#at1.contact}}select{{/at1.contact}}">
+                        Contact
+                    </button>
+                </a>
+            </li>
+            <div>&nbsp;</div>
+        {{/at1.design_system}}
+
+        
     </ul>
 </div>
