@@ -1,2 +1,0 @@
-# for mustache templates
-chevron==0.14.0
