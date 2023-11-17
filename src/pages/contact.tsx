@@ -1,16 +1,16 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
-import Content from "../content/home.mdx";
+import Content from "../content/contact.mdx";
 
-const IndexPage: React.FC = () => {
+const ContactPage = () => {
   return (
     <Layout>
       <Content />
     </Layout>
-  );
-};
+  )
+}
 
-export const Head = () => <Seo title="Home Page" />
+export const Head = () => <Seo title="Contact" />
 
-export default IndexPage
+export default ContactPage

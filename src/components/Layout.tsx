@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import * as classes from './Layout.module.css';
 
 interface LayoutProps {
-  pageTitle: string;
+  pageTitle?: string;
   children: React.ReactNode;
 }
 
@@ -31,19 +31,14 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={classes.navLinkItem}>
-            <Link to="/about">
-              About
-            </Link>
-          </li>
-          <li className={classes.navLinkItem}>
-            <Link to="/blog" className={classes.navLinkText}>
-              Blog
+            <Link to="/contact">
+              Contact
             </Link>
           </li>
         </ul>
       </nav>
       <main>
-        <h1 className={classes.heading}>{pageTitle}</h1>
+        {pageTitle && <h1 className={classes.heading}>{pageTitle}</h1>}
         {children}
       </main>
     </div>
