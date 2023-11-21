@@ -16,13 +16,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mdx-js/react": "^2.3.0",
+    "@mui/material": "^5.14.18",
     "gatsby": "^5.12.4",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-mdx": "^5.12.3",
     "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-remark-images": "^7.12.3",
     "gatsby-source-filesystem": "^5.12.1",
+    "gatsby-theme-material-ui": "^5.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
