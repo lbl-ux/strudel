@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { HomeSection } from './HomeSection/HomeSection';
 import { Button } from 'gatsby-theme-material-ui';
 import { HomeSectionDescription } from './HomeSection/HomeSectionDescription';
 import { HomeSectionTitle } from './HomeSection/HomeSectionTitle';
 import { HomeSectionGrid } from './HomeSection/HomeSectionGrid';
-import { Link } from 'gatsby';
 
 export const About: React.FC = () => {
   return (
@@ -32,14 +32,32 @@ export const About: React.FC = () => {
               <InnerCardItem
                 title="Typology"
                 description="A tool for categorizing key elements making up scientific software projects"
-                link={<Link to='/'>Learn more</Link>}
+                link={
+                  <Button 
+                    to="/"
+                    size="large"
+                    endIcon={<ArrowForwardIcon />}
+                    sx={{ color: '#ffffff' }}
+                  >
+                    Learn more
+                  </Button>
+                }
               />
             </Grid>
             <Grid item sm={6}>
               <InnerCardItem
                 title="Design System"
                 description="A tool to streamline scientific software UI design and development"
-                link={<Link to='/'>Learn more</Link>}
+                link={
+                  <Button 
+                    to="/"
+                    size="large"
+                    endIcon={<ArrowForwardIcon />}
+                    sx={{ color: '#ffffff' }}
+                  >
+                    Learn more
+                  </Button>
+                }
               />
             </Grid>
           </Grid>
@@ -81,7 +99,9 @@ const InnerCardItem: React.FC<InnerCardItemProps> = ({
         <HomeSectionDescription>
           {description}
         </HomeSectionDescription>
-        {link}
+        <Box>
+          {link}
+        </Box>
       </Stack>
     </Box>
   )

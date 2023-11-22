@@ -37,6 +37,16 @@ const theme: Theme = createTheme({
           disableRipple: true, // No more ripple, on the whole application 💣!
         },
       },
+      // MuiToolbar: {
+      //   styleOverrides: {
+      //     regular: {
+      //       '@media (min-width: 0px)': {
+      //         paddingLeft: 0,
+      //         paddingRight: 0
+      //       }
+      //     }
+      //   }
+      // }
     },
 });
 
