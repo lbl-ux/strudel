@@ -25,15 +25,25 @@ const navbarItems = [
 
 export const Navbar: React.FC = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box 
+      sx={{ 
+        flexGrow: 1,
+        position: 'fixed',
+        top: 0,
+        width: '100%',
+        zIndex: 500,
+      }}
+    >
       <AppBar 
         position="static"
         sx={{
-          backgroundColor: 'info.main'
+          backgroundColor: 'info.main',
+          borderBottom: '1px solid',
+          borderBottomColor: 'neutral.main',
         }}
       >
         {/* <Container maxWidth="xl"> */}
-          <Toolbar sx={{ paddingLeft: 0 }}>
+          <Toolbar variant="dense" sx={{ paddingLeft: 0 }}>
             <Link to="/">
               <StaticImage
                 alt="STRUDEL header logo"
@@ -65,7 +75,6 @@ const NavItem: React.FC<NavItemProps> = ({
   return (
     <Link to={href}> 
       <Typography
-        variant="h6"
         component="span"
         sx={{
           fontWeight: 'normal',

@@ -16,7 +16,6 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
   return (
     <Box
       sx={{
-        padding: 8,
         position: 'relative',
         backgroundColor: variant === 'dark' ? 'info.main' : 'white',
         // borderBottomColor: variant === 'dark' ? 'white' : 'error.main',
@@ -38,7 +37,17 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
           }}
         />
       )}
-      <Container maxWidth="xl">
+      <Container 
+        maxWidth="lg"
+        sx={{
+          paddingTop: 8,
+          paddingBottom: 8,
+          '@media (max-width: 1300px)': {
+            paddingLeft: 8,
+            paddingRight: 8,
+          }
+        }}
+      >
         {children} 
       </Container>
     </Box>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Layout from '../components/Layout';
+import { BaseLayout } from '../components/BaseLayout';
 import Seo from '../components/Seo';
 import Content from "../content/contact.mdx";
 import Stack from '@mui/material/Stack';
@@ -7,7 +7,7 @@ import { Button } from 'gatsby-theme-material-ui';
 
 const ContactPage = () => {
   return (
-    <Layout>
+    <BaseLayout>
       <Stack p={4} spacing={2}>
         <Button variant="contained" color="primary">primary</Button>
         <Button variant="contained" color="secondary">secondary</Button>
@@ -17,7 +17,7 @@ const ContactPage = () => {
         <Button variant="contained" color="error">error</Button>
       </Stack>
       <Content />
-    </Layout>
+    </BaseLayout>
   )
 }
 
