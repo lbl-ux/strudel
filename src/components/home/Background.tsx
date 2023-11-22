@@ -22,62 +22,60 @@ export const Background: React.FC = () => {
           </>
         }
         rightContent={
-          <Grid container columnSpacing={4}>
-            <Grid item sm={6}>
-              <InnerCardItem
-                title="Typology"
-                description="A tool for categorizing key elements making up scientific software projects"
-                link={<Link to='/'>Learn more</Link>}
-              />
-            </Grid>
-            <Grid item sm={6}>
-              <InnerCardItem
-                title="Design System"
-                description="A tool to streamline scientific software UI design and development"
-                link={<Link to='/'>Learn more</Link>}
-              />
-            </Grid>
-          </Grid>
+          <Stack spacing={2}>
+            <Typography 
+              variant="h5" 
+              component="h3"
+              sx={{
+                color: 'info.main',
+                fontWeight: 'bold',
+              }}
+            >
+              User Experience in Research Softwares
+            </Typography>
+            <Box>
+              <Grid container columnSpacing={4}>
+                <Grid item sm={3}>
+                  <InnerCardItem>
+                    Iterative scientific inquiry results in always evolving user needs
+                  </InnerCardItem>
+                </Grid>
+                <Grid item sm={3}>
+                  <InnerCardItem>
+                    Software sustainability & efficiency needs regular UX investment
+                  </InnerCardItem>
+                </Grid>
+                <Grid item sm={3}>
+                  <InnerCardItem>
+                    Science projects often lack the UX processes & best practices
+                  </InnerCardItem>
+                </Grid>
+                <Grid item sm={3}>
+                  <InnerCardItem>
+                    Commercial software practices can’t be directly applied to science softwares
+                  </InnerCardItem>
+                </Grid>
+              </Grid>
+            </Box>
+            <Typography>User experience is often an afterthought in scientific software that impacts usability, accessibility, design, & functionality of products.</Typography>
+          </Stack>
         }
       />            
     </HomeSection>
   );
 };
 
-interface InnerCardItemProps {
-  title: string;
-  description: string;
-  link: React.ReactNode;
-}
-
-const InnerCardItem: React.FC<InnerCardItemProps> = ({
-  title,
-  description,
-  link
-}) => {
+const InnerCardItem: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <Box
       sx={{
-        borderColor: 'primary.main',
+        backgroundColor: 'neutral.light',
         borderRadius: 4,
-        borderStyle: 'solid',
-        borderWidth: 1,
-        padding: 3
+        height: '100%',
+        padding: 3,
       }}
     >
-      <Stack spacing={2}>
-        <Typography 
-          variant="h4" 
-          component="h3" 
-          sx={{ fontWeight: 'bold'}}
-        >
-          {title}
-        </Typography>
-        <HomeSectionDescription>
-          {description}
-        </HomeSectionDescription>
-        {link}
-      </Stack>
+      {children}
     </Box>
   )
 }

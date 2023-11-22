@@ -13,7 +13,7 @@ export const HomeSectionGrid: React.FC<HomeSectionProps> = ({
   rightContent = 'left'
 }) => {
   return (
-    <Grid container>
+    <Grid container columnSpacing={4}>
       <Grid item sm={5}>
         <Stack spacing={3}>
           {leftContent}
