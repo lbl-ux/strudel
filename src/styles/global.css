@@ -1,0 +1,17 @@
+/* .gatsby-image-wrapper [data-main-image] {
+  opacity: 1;
+  transition: none;
+} */
+
+html, 
+body, 
+#___gatsby, 
+#gatsby-focus-wrapper,
+#base-layout {
+  min-height: 100vh;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}

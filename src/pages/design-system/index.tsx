@@ -1,15 +1,16 @@
 import * as React from 'react';
-import Layout from '../../components/Layout';
+import { BaseLayout } from '../../components/BaseLayout';
 import Seo from '../../components/Seo';
 import Content from "../../content/design-system/design-system.mdx";
+import { SidebarLayout } from '../../components/SidebarLayout';
 
 const DesignSystemPage = () => {
   return (
-    <Layout>
+    <SidebarLayout>
       <Content />
-    </Layout>
-  )
-}
+    </SidebarLayout>
+  );
+};
 
 export const Head = () => <Seo title="Design System" />
 
