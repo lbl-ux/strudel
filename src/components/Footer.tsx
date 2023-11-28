@@ -1,18 +1,22 @@
 import * as React from 'react';
-import { Box, Container } from '@mui/material';
+import { Box, Breakpoint, Container } from '@mui/material';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  containerWidth?: false | Breakpoint
+}
+
+export const Footer: React.FC<FooterProps> = ({
+  containerWidth = 'lg'
+}) => {
   return (
     <Box
       sx={{
-        backgroundColor: 'info.main',
         borderTop: '1px solid',
         borderTopColor: 'neutral.main',
-        color: '#fff',
       }}
     >
       <Container
-        maxWidth="lg"
+        maxWidth={containerWidth}
         sx={{
           paddingTop: 8,
           paddingBottom: 8

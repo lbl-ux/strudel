@@ -43,7 +43,7 @@ export const BaseLayout: React.FC<BaseLayoutProps> = ({
           >
             {children}
           </Box>
-          <Footer />
+          <Footer containerWidth={hasSidebar ? 'md' : 'lg'} />
         </Box>
       </Stack>
     </Box>

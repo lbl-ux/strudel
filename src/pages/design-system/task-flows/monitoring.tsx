@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Seo from '../../../components/Seo';
-import Content from "../../../content/design-system/task-flows/task-flows.mdx";
+import Content from "../../../content/design-system/task-flows/monitoring.mdx";
 import { SidebarLayout } from '../../../components/SidebarLayout';
 
-const TaskFlowsPage = () => {
+const MonitoringPage = () => {
   return (
     <SidebarLayout>
       <Content />
@@ -11,6 +11,6 @@ const TaskFlowsPage = () => {
   )
 }
 
-export const Head = () => <Seo title="Task Flows" />
+export const Head = () => <Seo title="Monitoring" />
 
-export default TaskFlowsPage
+export default MonitoringPage
