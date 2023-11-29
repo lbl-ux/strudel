@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box, List, ListItem, Stack, Typography } from '@mui/material';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import { useLocation } from '@gatsbyjs/reach-router';
 
 interface BaseLayoutProps extends React.PropsWithChildren {
   hasSidebar?: boolean;
@@ -25,7 +26,7 @@ export const Sidebar: React.FC<BaseLayoutProps> = ({
   hasSidebar,
   children 
 }) => {
-  console.log(window.location);
+  const { pathname } = useLocation();
   const { site: { siteMetadata: { menuLinks } } } = useStaticQuery<DataProps>(graphql`
     query {
       site {
@@ -46,15 +47,18 @@ export const Sidebar: React.FC<BaseLayoutProps> = ({
       }
     }
   `);
-  const pathnames = window.location.pathname.split('/').filter(d => d);
-  pathnames.splice(pathnames.length - 1);
-  const parentPath = `/${pathnames.join('/')}`;
-  const currentPath = removeTrailingSlash(window.location.pathname);
+  // Split pathname by slash and remove empty strings
+  const pathnameSplit = pathname.split('/').filter((d: string) => d);
+  pathnameSplit.splice(pathnameSplit.length - 1);
+  const parentPath = `/${pathnameSplit.join('/')}`;
+  const currentPath = removeTrailingSlash(pathname);
   let parentPage: MenuLink | null = null;
   // Default current page to the root home page (first item in menuLinks)
   let currentPage: MenuLink = menuLinks[0];
-  // Traverse the menuLinks to find the current page and its parent
-  // Number of nested loops is based on the maximum depth of menuLinks
+  /**
+   * Traverse the menuLinks to find the current page and its parent
+   * Number of nested loops is based on the maximum depth of menuLinks
+   */
   menuLinks.forEach((page: MenuLink) => {
     if (page.path === currentPath) {
       currentPage = page;
