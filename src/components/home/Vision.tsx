@@ -27,7 +27,7 @@ export const Vision: React.FC = () => {
             <StaticImage
               alt="STRUDEL storyboard comic"
               placeholder="blurred"
-              src="../../content/images/strudel-storyboard.png"
+              src="../../../content/images/strudel-storyboard.png"
             />
           </Box>
         }

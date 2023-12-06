@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Seo from '../../components/Seo';
-import Content from "../../content/design-system/getting-started.mdx";
+import Content from "../../../content/design-system/getting-started.mdx";
 import { SidebarLayout } from '../../components/SidebarLayout';
 
 const GettingStartedPage = () => {

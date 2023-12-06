@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
               alt="STRUDEL header logo"
               loading="eager"
               placeholder="none"
-              src="../../content/images/strudel-logo-transp.png"
+              src="../../../content/images/strudel-logo-transp.png"
             />
           </Box>
         </Box>

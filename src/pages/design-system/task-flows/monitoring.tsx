@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Seo from '../../../components/Seo';
-import Content from "../../../content/design-system/task-flows/monitoring.mdx";
+import Content from "../../../../content/design-system/task-flows/monitoring.mdx";
 import { SidebarLayout } from '../../../components/SidebarLayout';
 
 const MonitoringPage = () => {

@@ -25,7 +25,7 @@ export const Team: React.FC = () => {
             image={(
               <StaticImage
                 alt="STRUDEL team member photo"
-                src="../../content/images/wallpaper.jpg"
+                src="../../../content/images/wallpaper.jpg"
                 {...memberImageProps}
               />
             )}
@@ -36,7 +36,7 @@ export const Team: React.FC = () => {
             image={(
               <StaticImage
                 alt="STRUDEL team member photo"
-                src="../../content/images/wallpaper.jpg"
+                src="../../../content/images/wallpaper.jpg"
                 {...memberImageProps}
               />
             )}
@@ -47,7 +47,7 @@ export const Team: React.FC = () => {
             image={(
               <StaticImage
                 alt="STRUDEL team member photo"
-                src="../../content/images/wallpaper.jpg"
+                src="../../../content/images/wallpaper.jpg"
                 {...memberImageProps}
               />
             )}
@@ -58,7 +58,7 @@ export const Team: React.FC = () => {
             image={(
               <StaticImage
                 alt="STRUDEL team member photo"
-                src="../../content/images/wallpaper.jpg"
+                src="../../../content/images/wallpaper.jpg"
                 {...memberImageProps}
               />
             )}
@@ -69,7 +69,7 @@ export const Team: React.FC = () => {
             image={(
               <StaticImage
                 alt="STRUDEL team member photo"
-                src="../../content/images/wallpaper.jpg"
+                src="../../../content/images/wallpaper.jpg"
                 {...memberImageProps}
               />
             )}
@@ -80,7 +80,7 @@ export const Team: React.FC = () => {
             image={(
               <StaticImage
                 alt="STRUDEL team member photo"
-                src="../../content/images/wallpaper.jpg"
+                src="../../../content/images/wallpaper.jpg"
                 {...memberImageProps}
               />
             )}

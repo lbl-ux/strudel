@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
                 alt="STRUDEL header logo"
                 loading="eager"
                 placeholder="none"
-                src="../content/images/strudel-logo-icon.png"
+                src="../../content/images/strudel-logo-icon.png"
               />
             </Link>
             {navbarItems.map((item, i) => (

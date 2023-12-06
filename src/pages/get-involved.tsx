@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BaseLayout } from '../components/BaseLayout';
 import Seo from '../components/Seo';
-import Content from "../content/get-involved.mdx";
+import Content from "../../content/get-involved.mdx";
 import { Container } from '@mui/material';
 
 const GetInvolvedPage = () => {

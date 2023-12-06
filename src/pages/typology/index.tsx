@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BaseLayout } from '../../components/BaseLayout';
 import Seo from '../../components/Seo';
-import Content from "../../content/typology/typology.mdx";
+import Content from "../../../content/typology/typology.mdx";
 import { SidebarLayout } from '../../components/SidebarLayout';
 
 const TypologyPage = () => {
