@@ -2,28 +2,30 @@ import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { AppBar, Box, Container, Grid, Stack, Toolbar, Typography } from '@mui/material';
 import { PropsWithChildren } from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import { StrudelPage } from '../../gatsby-node';
 
-const navbarItems = [
-  {
-    label: 'Overview',
-    path: '/'
-  },
-  {
-    label: 'Typology',
-    path: '/typology'
-  },
-  {
-    label: 'Design System',
-    path: '/design-system'
-  },
-  {
-    label: 'Get Involved',
-    path: '/get-involved'
+interface PagesResult {
+  configJson: {
+    pages: StrudelPage[]
   }
-];
+}
 
+/**
+ * Top navbar component that displays top-level page links from strudel-config.json.
+ */
 export const Navbar: React.FC = () => {
+  const { configJson: { pages } } = useStaticQuery<PagesResult>(graphql`
+    query {
+      configJson {
+        pages {
+          name
+          path
+        }
+      }
+    }
+  `);
+
   return (
     <Box 
       sx={{ 
@@ -52,9 +54,9 @@ export const Navbar: React.FC = () => {
                 src="../../content/images/strudel-logo-icon.png"
               />
             </Link>
-            {navbarItems.map((item, i) => (
-              <NavItem key={`${item.label} ${i}`} href={item.path}>
-                {item.label}
+            {pages.map((page, i) => (
+              <NavItem key={`${page.name} ${i}`} href={page.path}>
+                {page.name}
               </NavItem>
             ))}
           </Toolbar>

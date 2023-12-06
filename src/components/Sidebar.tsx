@@ -4,7 +4,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import { useLocation } from '@gatsbyjs/reach-router';
 import { StrudelPage } from '../../gatsby-node';
 
-interface DataProps {
+interface PagesResult {
   configJson: {
     pages: StrudelPage[]
   }
@@ -17,7 +17,7 @@ interface DataProps {
  */
 export const Sidebar: React.FC = () => {
   const { pathname } = useLocation();
-  const { configJson: { pages } } = useStaticQuery<DataProps>(graphql`
+  const { configJson: { pages } } = useStaticQuery<PagesResult>(graphql`
     query {
       configJson {
         pages {
