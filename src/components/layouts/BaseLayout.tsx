@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { Box, Stack } from '@mui/material';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
-import { Sidebar } from './Sidebar';
+import { Navbar } from '../Navbar';
+import { Footer } from '../Footer';
+import { Sidebar } from '../Sidebar';
 
 interface BaseLayoutProps extends React.PropsWithChildren {
   hasSidebar?: boolean;
 }
 
-export const BaseLayout: React.FC<BaseLayoutProps> = ({
+const BaseLayout: React.FC<BaseLayoutProps> = ({
   hasSidebar,
   children 
 }) => {
@@ -49,3 +49,5 @@ export const BaseLayout: React.FC<BaseLayoutProps> = ({
     </Box>
   )
 };
+
+export default BaseLayout;

@@ -95,6 +95,13 @@ const config: GatsbyConfig = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'strudel-config',
+        path: `${__dirname}/config`,
+      }
+    },
+    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         gatsbyRemarkPlugins: [
@@ -107,12 +114,7 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-transformer-json',
-      options: {
-        typeName: 'Json',
-      },
-    },
+    'gatsby-transformer-json',
   ],
 }
 

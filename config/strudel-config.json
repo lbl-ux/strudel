@@ -1,0 +1,112 @@
+{
+  "pages": [
+    {
+      "name": "Overview",
+      "path": "/"
+    },
+    {
+      "name": "Typology",
+      "path": "/typology",
+      "markdownId": "typology",
+      "layoutComponent": "SidebarLayout",
+      "children": [
+        {
+          "name": "Getting Started",
+          "path": "/typology/getting-started",
+          "markdownId": "typology-getting-started",
+          "layoutComponent": "SidebarLayout"
+        },
+        {
+          "name": "Facets",
+          "path": "/typology/facets",
+          "markdownId": "typology-facets",
+          "layoutComponent": "SidebarLayout"
+        }
+      ]
+    },
+    {
+      "name": "Design System",
+      "path": "/design-system",
+      "markdownId": "design-system",
+      "layoutComponent": "SidebarLayout",
+      "children": [
+        {
+          "name": "Getting Started",
+          "path": "/design-system/getting-started",
+          "markdownId": "design-system-getting-started",
+          "layoutComponent": "SidebarLayout"
+        },
+        {
+          "name": "Task Flows",
+          "path": "/design-system/task-flows",
+          "markdownId": "task-flows",
+          "layoutComponent": "SidebarLayout",
+          "children": [
+            {
+              "name": "Comparison",
+              "path": "/design-system/task-flows/comparison",
+              "markdownId": "task-flows-comparison",
+              "layoutComponent": "SidebarLayout"
+            },
+            {
+              "name": "Contributing Data",
+              "path": "/design-system/task-flows/contributing-data",
+              "markdownId": "task-flows-contributing-data",
+              "layoutComponent": "SidebarLayout"
+            },
+            {
+              "name": "Exploring Datasets",
+              "path": "/design-system/task-flows/exploring-datasets",
+              "markdownId": "task-flows-exploring-datasets",
+              "layoutComponent": "SidebarLayout"
+            },
+            {
+              "name": "Exploring Entities",
+              "path": "/design-system/task-flows/exploring-entities",
+              "markdownId": "task-flows-exploring-entities",
+              "layoutComponent": "SidebarLayout"
+            },
+            {
+              "name": "Monitoring",
+              "path": "/design-system/task-flows/monitoring",
+              "markdownId": "task-flows-monitoring",
+              "layoutComponent": "SidebarLayout"
+            },
+            {
+              "name": "Optimization",
+              "path": "/design-system/task-flows/optimization",
+              "markdownId": "task-flows-optimization",
+              "layoutComponent": "SidebarLayout"
+            }
+          ]
+        },
+        {
+          "name": "UI Library",
+          "path": "ui-library",
+          "markdownId": "ui-library",
+          "layoutComponent": "SidebarLayout",
+          "children": [
+            {
+              "name": "Getting Started",
+              "path": "/ui-library/getting-started",
+              "markdownId": "ui-library-getting-started",
+              "layoutComponent": "SidebarLayout"
+            },
+            {
+              "name": "React Templates",
+              "path": "/ui-library/react-templates",
+              "markdownId": "ui-library-react-templates",
+              "layoutComponent": "SidebarLayout"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Get Involved",
+      "path": "/get-involved",
+      "markdownId": "get-involved",
+      "layoutComponent": "ContainerLayout"
+    }
+  ]
+}
