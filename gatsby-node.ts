@@ -4,7 +4,7 @@ import type { GatsbyNode } from "gatsby";
 /**
  * Possible properties for a page object in strudel-config.json.
  */
-interface StrudelPage {
+export interface StrudelPage {
   name: string;
   path: string;
   markdownId?: string;
@@ -99,7 +99,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   /**
    * Build a flat list of page objects from the json
    */
-  const flattenPages = (pages: StrudelPage[]) => { 
+  const flattenPages = (pages: StrudelPage[]): StrudelPage[] => { 
     return pages.reduce((flattened: StrudelPage[], { children, ...rest }) => {      
       return flattened
         .concat([{ ...rest }])

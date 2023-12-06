@@ -2,64 +2,60 @@ import * as React from 'react';
 import { Box, List, ListItem, Stack, Typography } from '@mui/material';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { useLocation } from '@gatsbyjs/reach-router';
-
-interface BaseLayoutProps extends React.PropsWithChildren {
-  hasSidebar?: boolean;
-}
-
-interface MenuLink {
-  name: string;
-  path: string;
-  fullPath: string;
-  children?: MenuLink[] | null
-}
+import { StrudelPage } from '../../gatsby-node';
 
 interface DataProps {
-  site: {
-    siteMetadata: {
-      menuLinks: MenuLink[];
-    }
+  configJson: {
+    pages: StrudelPage[]
   }
 }
 
-export const Sidebar: React.FC<BaseLayoutProps> = ({
-  hasSidebar,
-  children 
-}) => {
+/**
+ * Sidebar component that dynamically displays page links based on the current 
+ * page and its position in the navigational architecture.
+ * The architecture and link metadata is pulled from strudel-config.json.
+ */
+export const Sidebar: React.FC = () => {
   const { pathname } = useLocation();
-  const { site: { siteMetadata: { menuLinks } } } = useStaticQuery<DataProps>(graphql`
+  const { configJson: { pages } } = useStaticQuery<DataProps>(graphql`
     query {
-      site {
-        siteMetadata {
-          menuLinks {
+      configJson {
+        pages {
+          markdownId
+          name
+          path
+          layoutComponent
+          children {
+            markdownId
             name
             path
+            layoutComponent
             children {
+              markdownId
               name
               path
-              children {
-                name
-                path
-              }
+              layoutComponent
             }
           }
         }
       }
     }
   `);
-  // Split pathname by slash and remove empty strings
+
+  /**
+   * Split pathname by slash and remove empty strings
+   */
   const pathnameSplit = pathname.split('/').filter((d: string) => d);
   pathnameSplit.splice(pathnameSplit.length - 1);
   const parentPath = `/${pathnameSplit.join('/')}`;
   const currentPath = removeTrailingSlash(pathname);
-  let parentPage: MenuLink | null = null;
-  // Default current page to the root home page (first item in menuLinks)
-  let currentPage: MenuLink = menuLinks[0];
+  let parentPage: StrudelPage | null = null;
+  let currentPage: StrudelPage = pages[0];
   /**
    * Traverse the menuLinks to find the current page and its parent
    * Number of nested loops is based on the maximum depth of menuLinks
    */
-  menuLinks.forEach((page: MenuLink) => {
+  pages.forEach((page: StrudelPage) => {
     if (page.path === currentPath) {
       currentPage = page;
     }
@@ -67,7 +63,7 @@ export const Sidebar: React.FC<BaseLayoutProps> = ({
       parentPage = page;
     }
     if (page.children) {
-      page.children.forEach((subPage: MenuLink) => {
+      page.children.forEach((subPage: StrudelPage) => {
         if (subPage.path === currentPath) {
           currentPage = subPage;
         }
@@ -75,7 +71,7 @@ export const Sidebar: React.FC<BaseLayoutProps> = ({
           parentPage = subPage;
         }
         if (page.children) {
-          page.children.forEach((subSubPage: MenuLink) => {
+          page.children.forEach((subSubPage: StrudelPage) => {
             if (subSubPage.path === currentPath) {
               currentPage = subSubPage;
             }
@@ -87,11 +83,13 @@ export const Sidebar: React.FC<BaseLayoutProps> = ({
       })
     }
   });
-  let sidebarRootLink: MenuLink | null = null;
-  let sidebarLinks: MenuLink[] = [];
-  // If the current page has child pages
-  // then it is the root item in the sidebar and its children are the links.
-  // Otherwise, the parent page is the root item and the parent's children are the links.
+  let sidebarRootLink: StrudelPage | null = null;
+  let sidebarLinks: StrudelPage[] = [];
+  /**
+   * If the current page has child pages
+   * then it is the root item in the sidebar and its children are the links.
+   * Otherwise, the parent page is the root item and the parent's children are the links.
+   */
   if (currentPage.children) {
     sidebarRootLink = currentPage;
     sidebarLinks = currentPage.children;
